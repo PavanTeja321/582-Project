@@ -1,0 +1,18 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\CND1405JL8> cd DD:\Dev\trydjango
+cd : Cannot find drive. A drive with the name 'DD' does not exist.
+At line:1 char:1
++ cd DD:\Dev\trydjango
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (DD:String) [Set-Location], DriveNotFoundException
+    + FullyQualifiedErrorId : DriveNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\CND1405JL8> cd D:\Dev\trydjango
+PS D:\Dev\trydjango> myworld/Scripts/Activate.ps1
+(myworld) PS D:\Dev\trydjango> cd my_tennis_club
+(myworld) PS D:\Dev\trydjango\my_tennis_club> py manage.py startapp members
+(myworld) PS D:\Dev\trydjango\my_tennis_club>

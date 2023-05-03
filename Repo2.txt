@@ -1,0 +1,116 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\WINDOWS\system32> Set-ExecutionPolicy RemoteSigned
+
+Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
+you to the security risks described in the about_Execution_Policies help topic at
+https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+PS C:\WINDOWS\system32> cd D:\Dev\trydjango
+PS D:\Dev\trydjango> myworld\Scripts\Activate.ps1
+(myworld) PS D:\Dev\trydjango> py -m pip install Django
+Collecting Django
+  Using cached Django-4.2-py3-none-any.whl (8.0 MB)
+Collecting asgiref<4,>=3.6.0
+  Using cached asgiref-3.6.0-py3-none-any.whl (23 kB)
+Collecting sqlparse>=0.3.1
+  Using cached sqlparse-0.4.4-py3-none-any.whl (41 kB)
+Collecting tzdata
+  Using cached tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, Django
+Successfully installed Django-4.2 asgiref-3.6.0 sqlparse-0.4.4 tzdata-2023.3
+
+[notice] A new release of pip available: 22.3.1 -> 23.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(myworld) PS D:\Dev\trydjango> django-admin startproject my_tennis_club
+(myworld) PS D:\Dev\trydjango> py manage.py runserver
+C:\Users\CND1405JL8\AppData\Local\Programs\Python\Python311\python.exe: can't open file 'D:\\Dev\\trydjango\\manage.py': [Errno 2] No such file or directory
+(myworld) PS D:\Dev\trydjango> cd D:\Dev\trydjango
+(myworld) PS D:\Dev\trydjango> my_tennis_club\Scripts\Activate.ps1
+my_tennis_club\Scripts\Activate.ps1 : The module 'my_tennis_club' could not be loaded. For more information, run
+'Import-Module my_tennis_club'.
+At line:1 char:1
++ my_tennis_club\Scripts\Activate.ps1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (my_tennis_club\Scripts\Activate.ps1:String) [], CommandNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : CouldNotAutoLoadModule
+
+(myworld) PS D:\Dev\trydjango> deactivate
+PS D:\Dev\trydjango> cd D:\Dev\trydjango
+PS D:\Dev\trydjango> my_tennis_club\Scripts\Activate.ps1
+my_tennis_club\Scripts\Activate.ps1 : The module 'my_tennis_club' could not be loaded. For more information, run
+'Import-Module my_tennis_club'.
+At line:1 char:1
++ my_tennis_club\Scripts\Activate.ps1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (my_tennis_club\Scripts\Activate.ps1:String) [], CommandNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : CouldNotAutoLoadModule
+
+PS D:\Dev\trydjango> myworld\Scripts\Activate.ps1
+(myworld) PS D:\Dev\trydjango> django-admin startproject my_tennis_club
+(myworld) PS D:\Dev\trydjango> deactivate
+PS D:\Dev\trydjango> cd myworld
+PS D:\Dev\trydjango\myworld> django-admin startproject my_tennis_club
+django-admin : The term 'django-admin' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ django-admin startproject my_tennis_club
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (django-admin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Dev\trydjango\myworld> myworld\Scripts\Activate.ps1
+myworld\Scripts\Activate.ps1 : The module 'myworld' could not be loaded. For more information, run 'Import-Module
+myworld'.
+At line:1 char:1
++ myworld\Scripts\Activate.ps1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (myworld\Scripts\Activate.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CouldNotAutoLoadModule
+
+PS D:\Dev\trydjango\myworld> cd trydjango
+cd : Cannot find path 'D:\Dev\trydjango\myworld\trydjango' because it does not exist.
+At line:1 char:1
++ cd trydjango
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\Dev\trydjango\myworld\trydjango:String) [Set-Location], ItemNotFound
+   Exception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS D:\Dev\trydjango\myworld> cd ..
+PS D:\Dev\trydjango> django-admin startproject my_tennis_club
+django-admin : The term 'django-admin' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ django-admin startproject my_tennis_club
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (django-admin:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Dev\trydjango> myworld\Scripts\Activate.ps1
+(myworld) PS D:\Dev\trydjango> django-admin startproject my_tennis_club
+CommandError: 'D:\Dev\trydjango\my_tennis_club' already exists
+(myworld) PS D:\Dev\trydjango> cd my_tennis_club
+(myworld) PS D:\Dev\trydjango\my_tennis_club> py manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 01, 2023 - 14:09:39
+Django version 4.2, using settings 'my_tennis_club.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+
+
+
+

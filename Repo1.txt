@@ -1,0 +1,29 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\WINDOWS\system32> Set-ExecutionPolicy RemoteSigned
+
+Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
+you to the security risks described in the about_Execution_Policies help topic at
+https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+PS C:\WINDOWS\system32> cd D:\Dev\trydjango
+PS D:\Dev\trydjango> myworld\Scripts\Activate.ps1
+(myworld) PS D:\Dev\trydjango> py -m pip install Django
+Collecting Django
+  Using cached Django-4.2-py3-none-any.whl (8.0 MB)
+Collecting asgiref<4,>=3.6.0
+  Using cached asgiref-3.6.0-py3-none-any.whl (23 kB)
+Collecting sqlparse>=0.3.1
+  Using cached sqlparse-0.4.4-py3-none-any.whl (41 kB)
+Collecting tzdata
+  Using cached tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, Django
+Successfully installed Django-4.2 asgiref-3.6.0 sqlparse-0.4.4 tzdata-2023.3
+
+[notice] A new release of pip available: 22.3.1 -> 23.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(myworld) PS D:\Dev\trydjango>
